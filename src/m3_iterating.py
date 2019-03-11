@@ -330,7 +330,11 @@ def draw_circles(window, points, radius, color):
     # TODO: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    circle = rg
+    for k in range(len(points)):
+        circle = rg.Circle(points[k], radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+        window.render(1)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

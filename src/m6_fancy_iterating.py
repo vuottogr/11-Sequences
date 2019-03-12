@@ -58,10 +58,10 @@ def main():
     run_test_print_items_in_second_half(sequence1, sequence2, sequence3,
                                         sequence4)
     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
-    # run_test_print_items_that_are_strings(sequence1, sequence2, sequence3,
-    #                                       sequence4)
-    # run_test_print_items_that_are_odd_integers(sequence1, sequence2,
-    #                                            sequence3, sequence4)
+    run_test_print_items_that_are_strings(sequence1, sequence2, sequence3,
+                                          sequence4)
+    run_test_print_items_that_are_odd_integers(sequence1, sequence2,
+                                               sequence3, sequence4)
 
 
 def run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
@@ -496,7 +496,7 @@ def print_items_that_are_strings(sequence):
       bone is at index 4
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # done: 8. Implement and test this function.
     #
     # IMPORTANT:
     #   -- A string is, by definition, an object whose type is   str.
@@ -508,7 +508,9 @@ def print_items_that_are_strings(sequence):
     #
     #        Note that   str   has NO quotes surrounding it.
     # -------------------------------------------------------------------------
-
+    for k in range(len(sequence)):
+        if type (sequence[k]) == str:
+            print(sequence[k], 'is at index', k)
 
 ###############################################################################
 # Iterating through a sequence, selecting items:
@@ -527,12 +529,15 @@ def print_items_that_are_odd_integers(sequence):
       33 is at index 5
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # done: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
     # -------------------------------------------------------------------------
-
+    for k in range(len(sequence)):
+            if type (sequence[k]) == int:
+                if sequence[k] % 2 != 0:
+                    print(sequence[k], 'is at index', k)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
